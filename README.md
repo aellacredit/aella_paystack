@@ -1,10 +1,10 @@
 A Flutter package for making payments via Paystack Payment Gateway (https://paystack.com)
 
 <p align="center">
-  <a href="https://pub.dev/packages/flutter_paystack_max"><img src="https://img.shields.io/pub/v/flutter_paystack_max.svg" alt="pub.dev"></a>
-  <a href="https://pub.dev/packages/flutter_paystack_max/score"><img src="https://img.shields.io/pub/likes/flutter_paystack_max" alt="likes"></a>
-  <a href="https://pub.dev/packages/flutter_paystack_max/score"><img src="https://img.shields.io/pub/popularity/flutter_paystack_max" alt="popularity"></a>
-  <a href="https://pub.dev/packages/flutter_paystack_max/score"><img src="https://img.shields.io/pub/points/flutter_paystack_max" alt="pub points"></a>
+  <a href="https://pub.dev/packages/flutter_paystack_max"><img src="https://img.shields.io/pub/v/aella_paystack.svg" alt="pub.dev"></a>
+  <a href="https://pub.dev/packages/flutter_paystack_max/score"><img src="https://img.shields.io/pub/likes/aella_paystack" alt="likes"></a>
+  <a href="https://pub.dev/packages/flutter_paystack_max/score"><img src="https://img.shields.io/pub/popularity/aella_paystack" alt="popularity"></a>
+  <a href="https://pub.dev/packages/flutter_paystack_max/score"><img src="https://img.shields.io/pub/points/aella_paystack" alt="pub points"></a>
 </p>
 
 <p align="center">
@@ -97,9 +97,3 @@ print(response); // Result of the confirmed payment
 ## Additional information
 
 Visit the paystack documentation for more information https://paystack.com/docs/api/transaction
-
-## :pencil: Contributing, :disappointed: Issues and :bug: Bug Reports
-
-This project is open to contributions. </br>
-Please feel very free to help improve the payment experience on Flutter. </br>
-Experienced an issue or want to report a bug? Please, [report it here](https://github.com/binemmanuel/flutter_paystack_max/issues).
