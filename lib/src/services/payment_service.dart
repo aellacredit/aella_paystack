@@ -12,7 +12,7 @@ class PaymentService {
     PaystackTransactionRequest request,
   ) async {
     try {
-      final url = Uri.parse('$baseUrl/user/transaction/initialize');
+      final url = Uri.parse('$baseUrl/user/paystack/transaction/initialize');
 
       final response = await http.post(
         url,
