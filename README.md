@@ -1,17 +1,5 @@
 A Flutter package for making payments via Paystack Payment Gateway (https://paystack.com)
 
-<p align="center">
-  <a href="https://pub.dev/packages/flutter_paystack_max"><img src="https://img.shields.io/pub/v/aella_paystack.svg" alt="pub.dev"></a>
-  <a href="https://pub.dev/packages/flutter_paystack_max/score"><img src="https://img.shields.io/pub/likes/aella_paystack" alt="likes"></a>
-  <a href="https://pub.dev/packages/flutter_paystack_max/score"><img src="https://img.shields.io/pub/popularity/aella_paystack" alt="popularity"></a>
-  <a href="https://pub.dev/packages/flutter_paystack_max/score"><img src="https://img.shields.io/pub/points/aella_paystack" alt="pub points"></a>
-</p>
-
-<p align="center">
-   <img src="https://github.com/binemmanuel/flutter_paystack_max/blob/main/assets/gifs/payment-with-card.gif?raw=true" width="200" alt="Pay with card">
-  <img src="https://github.com/binemmanuel/flutter_paystack_max/blob/main/assets/gifs/payment-with-mobile-money.gif?raw=true" width="200" alt="Pay with mobile money">
-</p>
-
 ## Features
 
 :heavy_check_mark: All Paystack supported payment methods/channels
