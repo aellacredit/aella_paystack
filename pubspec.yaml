@@ -1,0 +1,28 @@
+name: aella_paystack
+description: "A Flutter package for making payments via Paystack Payment Gateway (https://paystack.com)."
+
+version: 1.0.6
+homepage: "https://github.com/aellacredit/aella_paystack"
+
+environment:
+    sdk: ">=3.2.3 <4.0.0"
+    flutter: ">=1.17.0"
+
+dependencies:
+    flutter:
+        sdk: flutter
+    http: ^1.2.0
+    url_launcher: ^6.3.1
+    webview_flutter: ^4.10.0
+
+dependency_overrides:
+    webview_flutter_wkwebview: 3.17.0
+
+dev_dependencies:
+    flutter_test:
+        sdk: flutter
+    flutter_lints: ^4.0.0
+
+    logger: ^2.2.0
+
+flutter:
