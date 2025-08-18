@@ -74,7 +74,7 @@ class PaystackTransactionRequest {
     final result = <String, dynamic>{};
 
     result.addAll({'reference': reference});
-    result.addAll({'secretKey': authToken});
+    result.addAll({'authToken': authToken});
     result.addAll({'email': email});
     result.addAll({'amount': amount});
     result.addAll({'currency': currency.toMap()});
@@ -93,7 +93,7 @@ class PaystackTransactionRequest {
   factory PaystackTransactionRequest.fromMap(Map<String, dynamic> map) {
     return PaystackTransactionRequest(
       reference: map['reference'] ?? '',
-      authToken: map['secretKey'] ?? '',
+      authToken: map['authToken'] ?? '',
       email: map['email'] ?? '',
       amount: map['amount']?.toDouble() ?? 0.0,
       currency: PaystackCurrency.fromMap(map['currency']),
@@ -113,7 +113,7 @@ class PaystackTransactionRequest {
 
   @override
   String toString() {
-    return 'PaystackTransactionRequest(reference: $reference, secretKey: $authToken, email: $email, amount: $amount, currency: $currency, plan: $plan, bearer: $bearer, metadata: $metadata, channel: $channel)';
+    return 'PaystackTransactionRequest(reference: $reference, authToken: $authToken, email: $email, amount: $amount, currency: $currency, plan: $plan, bearer: $bearer, metadata: $metadata, channel: $channel)';
   }
 
   @override
