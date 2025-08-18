@@ -1,6 +1,6 @@
+import 'package:aella_paystack/aella_paystack.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_paystack_max/aella_paystack.dart';
 import 'package:logger/logger.dart';
 
 void main() {
@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final request = PaystackTransactionRequest(
       reference: 'ps_${DateTime.now().microsecondsSinceEpoch}',
-      secretKey: secretKey,
+      authToken: secretKey,
       email: 'test@mail.com',
       amount: 15 * 100,
       currency: PaystackCurrency.ngn,

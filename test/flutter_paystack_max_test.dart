@@ -6,7 +6,7 @@ void main() {
   test('Initialize payment', () async {
     final request = PaystackTransactionRequest(
       reference: 'ps_${DateTime.now().microsecondsSinceEpoch}',
-      secretKey: '....',
+      authToken: '....',
       email: 'test@mail.com',
       amount: 15 * 100,
       currency: PaystackCurrency.ghs,

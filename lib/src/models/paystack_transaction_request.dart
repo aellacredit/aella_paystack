@@ -8,7 +8,7 @@ class PaystackTransactionRequest {
   /// Unique transaction reference. Only -, ., = and alphanumeric characters allowed.
   final String reference;
 
-  final String secretKey;
+  final String authToken;
 
   /// The customer's email address
   final String email;
@@ -36,7 +36,7 @@ class PaystackTransactionRequest {
 
   PaystackTransactionRequest({
     required this.reference,
-    required this.secretKey,
+    required this.authToken,
     required this.email,
     required this.amount,
     required this.currency,
@@ -59,7 +59,7 @@ class PaystackTransactionRequest {
   }) {
     return PaystackTransactionRequest(
       reference: reference ?? this.reference,
-      secretKey: secretKey ?? this.secretKey,
+      authToken: secretKey ?? this.authToken,
       email: email ?? this.email,
       amount: amount ?? this.amount,
       currency: currency ?? this.currency,
@@ -74,7 +74,7 @@ class PaystackTransactionRequest {
     final result = <String, dynamic>{};
 
     result.addAll({'reference': reference});
-    result.addAll({'secretKey': secretKey});
+    result.addAll({'secretKey': authToken});
     result.addAll({'email': email});
     result.addAll({'amount': amount});
     result.addAll({'currency': currency.toMap()});
@@ -93,7 +93,7 @@ class PaystackTransactionRequest {
   factory PaystackTransactionRequest.fromMap(Map<String, dynamic> map) {
     return PaystackTransactionRequest(
       reference: map['reference'] ?? '',
-      secretKey: map['secretKey'] ?? '',
+      authToken: map['secretKey'] ?? '',
       email: map['email'] ?? '',
       amount: map['amount']?.toDouble() ?? 0.0,
       currency: PaystackCurrency.fromMap(map['currency']),
@@ -113,7 +113,7 @@ class PaystackTransactionRequest {
 
   @override
   String toString() {
-    return 'PaystackTransactionRequest(reference: $reference, secretKey: $secretKey, email: $email, amount: $amount, currency: $currency, plan: $plan, bearer: $bearer, metadata: $metadata, channel: $channel)';
+    return 'PaystackTransactionRequest(reference: $reference, secretKey: $authToken, email: $email, amount: $amount, currency: $currency, plan: $plan, bearer: $bearer, metadata: $metadata, channel: $channel)';
   }
 
   @override
@@ -122,7 +122,7 @@ class PaystackTransactionRequest {
 
     return other is PaystackTransactionRequest &&
         other.reference == reference &&
-        other.secretKey == secretKey &&
+        other.authToken == authToken &&
         other.email == email &&
         other.amount == amount &&
         other.currency == currency &&
@@ -135,7 +135,7 @@ class PaystackTransactionRequest {
   @override
   int get hashCode {
     return reference.hashCode ^
-        secretKey.hashCode ^
+        authToken.hashCode ^
         email.hashCode ^
         amount.hashCode ^
         currency.hashCode ^

@@ -5,26 +5,22 @@ import '../models/models.dart';
 import '../widgets/widgets.dart';
 
 class PaymentService {
-  static const baseUrl = 'https://api.paystack.co';
+  static const baseUrl = 'https://alpha.aella.app';
 
   /// Initialize a transaction
   static Future<PaystackInitializedTraction> initializeTransaction(
     PaystackTransactionRequest request,
   ) async {
     try {
-      final url = Uri.parse('$baseUrl/transaction/initialize');
+      final url = Uri.parse('$baseUrl/user/transaction/initialize');
 
       final response = await http.post(
         url,
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer ${request.secretKey}',
+          'Authorization': 'Bearer ${request.authToken}',
         },
-        body: PaystackTransactionRequest.fromMap(request.toMap()
-              ..addAll({
-                'metadata': {...?request.metadata, 'cancel_action': 'cancel'}
-              }))
-            .toJson(),
+        body: PaystackTransactionRequest.fromMap(request.toMap()).toJson(),
       );
 
       return PaystackInitializedTraction.fromJson(response.body);
