@@ -37,7 +37,7 @@ class PaystackTransactionVerified {
 
   factory PaystackTransactionVerified.fromMap(Map<String, dynamic> map) {
     return PaystackTransactionVerified(
-      status: map['status'] ?? false,
+      status: map['status'] == "success" ? true : false,
       message: map['message'] ?? '',
       data: PaystackTransactionVerifiedData.fromMap(map['data']),
     );
