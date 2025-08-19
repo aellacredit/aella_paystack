@@ -67,16 +67,16 @@ class PaymentService {
   /// Confirm the status of a transaction
   static Future<PaystackTransactionVerified> verifyTransaction(
     String reference, {
-    required String paystackSecretKey,
+    required String authToken,
   }) async {
     try {
       final url = Uri.parse(
-        '$baseUrl/transaction/verify/$reference',
+        '$baseUrl/user/paystack/transaction/verify/$reference',
       );
 
       final response = await http.get(
         url,
-        headers: {'Authorization': 'Bearer $paystackSecretKey'},
+        headers: {'Authorization': 'Bearer $authToken'},
       );
 
       return PaystackTransactionVerified.fromJson(response.body);

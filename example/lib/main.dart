@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     final response = await PaymentService.verifyTransaction(
-      paystackSecretKey: secretKey,
+      authToken: secretKey,
       initializedTransaction.data?.reference ?? request.reference,
     );
 
