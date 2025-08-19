@@ -39,7 +39,7 @@ class PaystackInitializedTraction {
 
   factory PaystackInitializedTraction.fromMap(Map<String, dynamic> map) {
     return PaystackInitializedTraction(
-      status: map['status'] ?? false,
+      status: map['status'] == "success" ? true : false,
       message: map['message'] ?? '',
       data: map['data'] != null
           ? PaystackInitializedTractionData.fromMap(map['data'])
